@@ -1,0 +1,527 @@
+/*-----------------------------------------------------------------------------------
+    Theme Name: Seurat
+    Theme URI: http://www.fohui14.com/wp
+    Author: fohui
+    Author URI: http://www.fohui14.com/wp
+    Description: A wordpress Theme
+    Version: 1.0
+-----------------------------------------------------------------------------------
+    0.  CSS Reset
+    1.  Global
+    2.  Typography
+    3.  Header Styles
+    4.  Main Content Styles
+    5.  Sidebar & Footer
+    6.  Archive
+-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*  0.  CSS Reset - 修改自http://www.zhangxinxu.com
+/*-----------------------------------------------------------------------------------*/
+body{
+    font-size: 16px;
+    line-height:1.6;
+    font-family:tahoma,arial,"Hiragino Sans GB","微软雅黑",sans-serif;
+    color:#3c3c3c;
+}
+input,textarea,select{
+    font-size:12px;
+    font-size:100%;    
+    font-family:arial;
+    font-family:inherit;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,form,dl,dd{
+    margin:0;
+}
+h4,h5,h6{
+    font-size:1em;
+}
+ul,ol{
+    padding-left:0; 
+    list-style-type:none;
+}
+img{border:0;}
+
+/*-----------------------------------------------------------------------------------*/
+/*  1.  Global
+/*-----------------------------------------------------------------------------------*/
+a {
+    color: #6db6ab; 
+    text-decoration: none;
+}
+a:hover {color: #999;}
+.fix {zoom:1;}
+.fix:after {
+    content: "fo";
+    display: block;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+::-moz-selection {
+    background: #999;
+    color: #FCF6EA;
+    text-shadow: none;
+}
+::selection {
+    background: #999;
+    color: #FCF6EA;
+    text-shadow: none;
+}
+.division:before {
+    content: " ";
+    display: block;
+    border-top: 1px double #999;
+    width: 10%;
+    margin: 50px auto;
+}
+body {
+   background-color: #fcf6ea;
+
+}
+/* Tools --- */
+#tools {
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+}
+#tools li[title="ToTop"] {
+    position: relative;
+    bottom: -200px;
+    transition: all .5s;
+    z-index: -2px;
+}
+/* Tools search--- */
+.expanding-search {
+    box-sizing: border-box;
+}
+.expanding-search * {
+    box-sizing: inherit;
+}
+.expanding-search {
+    position: relative;
+    width: 0%;
+    min-width: 32px;
+    height: 32px;
+}
+.expanding-search .search-input {
+    position: absolute;
+    left: 100%;
+    top: 0;
+
+    width: 0%;
+    height: 32px;
+    border: none; 
+    font-size: 1em;
+    color: #6DB6AB ;
+    background-color: transparent;
+    border-bottom: 1px solid #6DB6AB;
+    padding:0;
+
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    transition: width .3s;
+    -webkit-backface-visibility: hidden;
+}
+.search-input::-webkit-input-placeholder {
+    color: #999;
+}
+.search-input:-moz-placeholder {
+    color: #999;
+}
+.icon-search,.search-submit {
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    outline: none;
+    padding-left: 2px;
+    cursor: pointer;
+}
+.icon-search {
+    color: #6DB6AB;
+}
+.search-submit {
+    background-color: transparent;
+    text-indent: -999px;
+    z-index: -1;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  2.  Typography
+/*-----------------------------------------------------------------------------------*/
+.fmt {
+    word-wrap:break-word;
+}
+.fmt h1 {
+    font-size: 1.7em;
+    border-bottom:2px solid #DDD;
+    padding-bottom:8px;
+}
+.fmt h2 {
+    font-size: 1.4em;
+    border-bottom:1px dotted #ccc;
+    padding-bottom:8px;
+}
+.fmt h3 {
+    font-size: 1.2em;
+}
+.fmt h4 {
+    font-size: 1em;
+}
+.fmt h5 {
+    font-size: .9em;
+}
+.fmt h6 {
+    font-size: .8em;
+}
+.fmt h4, .fmt p, .fmt ul, .fmt ol, .fmt pre, .fmt blockquote, .fmt table {
+    margin: 18px 0px;
+}
+.fmt p {
+    text-indent: 2em;
+}
+.fmt blockquote {
+    border-left: 5px solid #eee;
+    padding: 10px 20px;
+}
+.fmt pre,.fmt code {
+    font-size: .9em;
+    background-color: #f6f6f6;
+}
+.fmt pre {
+    position: relative;
+    padding: 10px;
+    border: medium none;
+    line-height: 1.3;
+    max-height: 500px;
+    overflow: auto;
+}
+.fmt pre code {
+    color: inherit;
+    font-size: 1em;
+    vertical-align: middle;
+}
+.fmt a {
+    font-weight: 700;
+}
+.fmt ul,.fmt ol {
+    padding-left: 30px;
+}
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #C7254E;
+    background-color: #f9f2f4;
+    border-radius: 6px;
+    font-family: "Consolas","Courier New",Courier,monospace;
+}
+b,strong {
+    font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  3.  Header Styles
+/*-----------------------------------------------------------------------------------*/
+#bg-images {
+    width: 100%;
+    height: 500px;
+}
+#contentDiv {
+    width: 90%;
+    max-width: 1000px;
+    margin: -100px auto 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px #fff;
+}
+.container {
+    padding: 50px 80px;
+}
+
+.header {
+    margin-bottom: 5em;
+    overflow: hidden;
+}
+.header .hgroup {
+    border-bottom: 8px solid #cc856f;
+    margin-bottom: .5em;
+}
+.header .hgroup h1{
+    margin-right: .5em;
+    text-shadow: 1px 2px #fff,2px 4px #edd4cd;
+    color: #cc856f;
+}
+.header .hgroup h1,.header .yiyan {
+    display: inline-block;
+}
+.header .yiyan a{
+    font-weight: 700;
+    font-size: .8em;
+    color: #999;
+}
+.header .nav {text-align: right;}
+.header .nav li {
+    display: inline-block;
+    padding: .3em .7em;
+    background-color: #cc856f;
+    border-radius: 2em;
+    border: 3px solid #cc856f;
+}
+.header .nav li a {
+    color: #fff;
+    font-weight: 700;
+}
+.header .nav li:hover  {
+    background-color: #fff;
+}
+.header .nav li:hover a {
+    color: #cc856f;
+}
+/*-----------------------------------------------------------------------------------*/
+/*  4.  Main Content Styles
+/*-----------------------------------------------------------------------------------*/
+.post {
+    margin-bottom: 30px;
+}
+
+.post-date {
+    text-align: right;
+}
+.post-date span {
+    float: right;
+    font-size: .8em;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #999;
+}
+.post .post-date {
+    border-top: 1px dashed #cc856f;
+}
+.post .post-date span {
+    border-right: 1px dashed #cc856f
+}
+.page-post .post-date span{
+    background-color: #EDD4CD;
+    color: #fff;
+}
+
+.post .post-title {
+    text-align: center;
+}
+.post .post-title a {
+    color: #cc856f;
+    margin-right: -109px;
+}
+.post .post-title:hover a {
+    color: #6DB6AB;
+}
+
+.post-sub a[rel="tag"] {
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: .8em;
+    color: #fff;
+    background-color: #6DB6AB;
+}
+.post-sub a[rel="tag"]:hover {
+    text-decoration: none;
+    background-color: #999;
+    color: #fcf6ea;
+}
+.post .post-views span {
+    font-size: .8em;
+    color: #999;
+}
+/* paging-nav page-nav --- */
+.paging-nav {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.paging-nav .next ,.paging-nav .prev {
+    padding: .1em .4em;
+    background-color: #6DB6AB;
+    border-radius: 2em;
+    border: 2px solid #6DB6AB;
+}
+.paging-nav .next,.paging-nav .prev{
+    color: #fff;
+    font-weight: 700;
+}
+.paging-nav .next:hover ,.paging-nav .prev:hover {
+    background-color: #fff;
+}
+.paging-nav .next:hover ,.paging-nav .prev:hover {
+    color: #6DB6AB;
+}
+
+
+.page-nav .btn {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+.page-nav .btn {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    padding: .5em 1em;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+.page-nav .btn a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.page-nav .btn:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition:all .3s;
+}
+.page-nav .next:after {
+    left: 0;
+    background-color: #cc856f;
+}
+.page-nav .prev:after {
+    right: 0;
+    background-color: #6DB6AB;
+}
+.btn.prev {
+    border: 2px solid #6DB6AB;
+}
+.btn.next {
+    border: 2px solid #cc856f;
+}
+.btn.next a {
+    color: #cc856f;
+}
+.btn:hover a{
+    color: #fff;
+}
+.btn:hover:after {
+    width: 100%;
+}
+
+/* .page-nav a[rel="prev"]:hover{
+    color: #6DB6AB;
+    background-color: #fff;
+} */
+
+/*-----------------------------------------------------------------------------------*/
+/*  5.  Sidebar & Footer
+/*-----------------------------------------------------------------------------------*/
+#sidebar .item {
+    box-sizing:border-box;
+    width: 25%;
+    float: left;
+}
+#sidebar h4+* {
+    padding-left: 10px;
+}
+#sidebar h4 {
+    color: #CC856F;
+}
+#footer {
+    text-align: center;
+    color: #999;
+    font-size: .8em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  6.  Archive
+/*-----------------------------------------------------------------------------------*/
+.center {
+    text-align: center;
+}
+.fullscreen {
+    margin-left: -80px;
+    margin-right: -80px;
+}
+.post-a {
+    display: table;
+    height: 100px;
+    width: 100%;
+    vertical-align: middle;
+    position: relative;
+}
+.post-a.animation {
+    opacity: 1;
+    -webkit-animation:fadeIn 300ms ease;
+    animation:fadeIn 300ms ease;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+    -webkit-animation-delay:1000ms;
+    animation-delay:1000ms
+}
+.post-a .content {
+    display: table-cell;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+.post-a .color {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    transition:background-color 300ms ease, width 400ms cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: -1;
+}
+.post-a .color.left {
+    left: 50%;
+}
+.post-a .color.right {
+    right: 50%;
+}
+.post-a,.post-a h1,.post-a span {
+    transition: color .3s;
+}
+.post-a:hover{
+    color: #fff;
+}
+.post-a:hover .color {
+    background-color: #db4c3f;
+    width: 50%;
+}
+.post-a:hover h1,.post-a:hover span {
+    color: #fff;
+}
+.post-a h1 {
+    color: #3f3f3f;
+    font-weight: normal;
+}
+.meta span {
+    margin-left: 10px;
+    color: #999;
+}
+@-webkit-keyframes fadeIn{
+    from{
+        -webkit-transform:scale(.9) translateY(-20px);
+        opacity:0;
+    }
+    to{
+        -webkit-transform:scale(1) translateY(0);
+        opacity:1;
+    }
+} 
+@-moz-keyframes fadeIn{
+    from{
+        -moz-transform:scale(.9) translateY(-20px);
+        opacity:0;
+    }
+    to{
+        -moz-transform:scale(1) translateY(0);
+        opacity:1;
+    }
+}
